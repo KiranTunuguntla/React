@@ -1,0 +1,57 @@
+1. Install node js-->npm(node package manager)
+2.After completion of installation. Check for npm and node version
+	node -v
+	npm -v
+3.Create new folder for react
+	mkdir ReactProjects
+4.Change directory to ReactProjects
+	cd/
+	cd ReactProjects
+5.Create react project
+	npx create-react-app projectname //this will execute the necessary packages instead of installing.
+	
+		or
+	npm install -g create-react-app
+	create-react-app  projectname
+6.Update the directory to ReactProjects
+7.Start the react server.
+	npm start
+	
+==================================install necessary packages=====================================================
+1.To use routers, execute this command
+	npm install react-router-dom --save
+	enable routing by index.js--> include the browser router tag with App inside <React.StrictMode>.<BrowserRouter><App /></BrowserRouter>
+2.To use axios, execute this command	
+	npm install axios
+3.To update the react server to start on different port.
+	package.json--> inside sripts tag-->start--> "set PORT=3006 && react-scripts start"
+4.To install the icons
+	npm install react-crud-icons --save
+5.To install bootstrap
+	npm install bootstrap --save
+	npm install --save reactstrap react react-dom
+6.To install the redux.
+	npm install -g redux --force      //install redux
+	npm install -g react-redux --force	//install react redux
+	npm install redux-thunk --save --force //install react thunk
+	npm install @reduxjs/toolkit --force
+	npm install --save-dev redux-devtools --force
+5.To rebuild the project.
+	npm run build
+==================================JSON Server Installation===================================
+
+1.npm install -g json-server
+create list of users json in folder, where this is installed. (refer to https://jsonplaceholder.typicode.com/ for sample data)
+
+2.json-server --watch Users.json
+	by default it will be on port 3000.
+3.To update the port, 
+	json-server --watch data.json --port 8000
+===================================Next.js installation===============================================
+1.npm i -g create-next-app 
+2.npm i -g create-next-app projectname
+3.update the directory to project folder.
+4.npm run build 
+5.npm run start
+6.npm run dev can also be run instead of step 4,5
+ 

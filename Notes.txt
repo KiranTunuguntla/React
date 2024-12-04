@@ -1,0 +1,463 @@
+LiveSCript--Java script
+
+ECMASCRIPT2015-
+ES6
+
+
+node js-->npm(node package manager)
+react
+
+npm install -g packagename
+npm 
+
+
+
+
+cmd
+node -v
+
+npm -v
+
+npx create-react-app projectname
+
+npm install -g create-react-app
+
+npm uninstall -g create-react-app
+
+npm view react version
+------
+create-react-app  projectname
+
+cd projectname
+
+npm start //starts server
+-----------
+
+ctrl+x //close
+-------------------------
+
+
+npx create-react-app projectname
+
+---------
+
+cd/
+
+cd ReactProjects (change directory to projects folder)
+
+cd project1 (change directory to project name)
+
+npm start
+--------------------
+npm vs npx
+
+npm- node package manager.
+	This will connect to npm site to install the dependencies and execute globally/locally.
+	
+npx- node package execute
+	This will connect to npm site and will not install the dependencies, but will execute the directly.
+--------------------
+WebPack - is introduced to minimise the file size which browser loads by default.
+			This will create a file bundle.js which helps in minimizing the size browser loads,
+
+------------------------
+
+babel is a complier/translator to convert JSX to JS.
+
+node_modules folder contains the required libraries.
+
+when will babel convert JSX to JS and where will it store?
+
+Public-index.html
+
+execution flow of files in NPM Start.
+npm start-->index.html-->index.js-->index.css
+
+APP files are defaultly created and rendered by local host.
+Common styles can be written in index.html
+reportWebVitals.js is used to track performance of web page in production.
+setupTest.js -- testing FW importing file.
+gitignore is used to integrate with GIT
+package.json-- details of versions.
+package-lock.json -more information/detailed above libraries
+
+src folder-- code is executed in this folder.
+by default APP component is created when ever project is created in Node.
+
+ctrl + ~ ---> to open terminal in VS Code.
+Set-ExecutionPolicy RemoteSigned to launch from the Power shell,
+-----------------------------------------------------------------------------------
+
+Component: is a class/function
+
+	1.Functional Component - latest version we use this. This is stateless component. 
+		(props, can hold the data to make it statefull). Props are immuttable(cant be changed)
+		before 16.x there is no concept of state in function. After that state is possible.
+		ex: Function Name(){}
+	2.Class component - This is statefull component.Muttable (values can be changed)
+		ex:import { Component } from "react";
+			class ComponentClass extends Component
+			{
+				render(){
+					return(
+					<div>
+						<h1>-----------------------------------------------------------</h1>
+						<h1>This is the example of class component. Render should be used here.</h1>
+					</div>
+					)
+				}
+			}
+			export default ComponentClass;
+			
+Constructor will be loaded defaultly with component in browser.
+-------------------------------------------------------
+React Version 18.x Current version.
+	Virtual DOM, This is library, where as Angular is Framework
+
+	in Virtual DOM, it will check with previous DOM object and pushes the changed object only to DOM.
+	One Way data binding (model to View data copying)
+	JSX: java script XML
+	Component: Each and every building block is  a component in react.
+
+
+There should be only one root tag in JS file. <div>************************
+
+export default app; is used to make it used by others
+	
+	
+--------------------------------------
+Arrow Function: This is introduced in ES6 features, this reduces the number of lines.
+
+	Normal Function: 
+		function addoftwo(a,b)
+		{
+		let result=a+b;
+		return result;
+		}
+		
+	Anonymous Function:
+		var add=function(a,b){	
+	return a+b;
+	}
+	
+	Arrow Function:
+	var add=(a,b)=>a+b  
+	var add=(a,b)=>{return a+b} //curly braces are required for return.
+	var m1=()=alert("no paramters") // when no parameter function.
+	
+------------------------
+ES7 install in VSCode. This will help in creating template by default using 
+rcc- react class component
+rce-react class component with export
+rfc-react function component
+rfce-react function component with export
+rafce-react arrow function component with export
+rafc-react arrow function component
+rfcp-react function component props
+rconst- class constructor
+allignment in VS Code : Ctrl+K and Ctrl+F
+comment--> Ctrl+/
+--------------------------
+Export****default - If there are multiple component inside file,If this is not mentioned, we need to mention in the parent file (APP.JS) which component has to be picked by:
+import {ComponentName} from 'path of file.' --> Import only ComponentName from Path of file
+import ComponentName1 from 'path of file' -->Imports default declared component name from path of file
+----------------------------	
+this.state-- set
+this.setstate--update
+
+***setState method is Asynchronouse by default.
+To make it Synchronous, this.setState({},()=>{console.log("Present",this.state.isPresent)})
+            //  This is an anonymous function, which is call back function, to make it synchronous
+
+MVC--->View (react works only for view).
+
+By default port is 3000, to update port,we need to explicitly confifure in package.json.
+Update port:
+
+package.json--> inside sripts tag-->start--> "set PORT=3006 && react-scripts start"
+----------------------------------------------------------------------------------
+Data Bindig:
+1. using Bind declaration with normal method this.methodName=this.methodName.bind(this)
+2. Using Arrow method without bind declaration statehandle=()=>{}
+3. Using normal method without bind declaration, and calling with arrow function. <button type="button" onClick={()=>this.stateHandle()}>Present</button>
+-----------------------------------------------------------------------------------
+Forms:
+
+to take input form end user in react.
+2 types of forms: 
+	1.Controlled -->Event, control handling will be taken by react. like event and action.(onChange-->setState)
+	2.Uncontrolled --->Ref, DOM will control the form. In uncontrolled form, we need to declare this.input=React.createRed(); in constructor.
+	
+By default onSubmit action, causes data not to retain.
+Use event.PreventDefault()or any.PreventDefault()
+
+after new vesrion of react, uncontrolled form is largely used.
+----------------------------------------------------------------------------------------
+Map is used with Arrays to map the data automatically.
+arrays.map(callback function)-->where array index is passed dynamically and need not initialized.
+	
+declaration example for passing multiple values: This is part of ES6 features
+	function(a){}
+	function(..a){} -->multiple values can be passed while initiating from parent. this is array.
+	
+	while passing to array.
+	var myName=["1","2"]
+	var newArr=[...myName,name=["1"]]
+	
+delete splice function.
+
+------------------------------------------------to install react icons--------------------------------------------------
+to install react icons.
+The package can be installed via npm:
+
+npm install react-crud-icons --save
+You’ll need to install React and PropTypes separately since those dependencies aren't included in the package.
+
+To rebuild the project:
+
+npm install
+npm run build
+--------------------------------------------------
+let x="10"
+
+let y=10
+
+x==y, true
+==, checks only the value and not the type.
+x===y, false
+===, checks both value and type.
+
+----------
+Hooks:
+Hook is a concept to define state in a functional concept, there are various OOTB methods for this.
+	Ex: useState(initial value) - can not be defined inside looping, 
+	useEffect: To make the API calls. This function is mounting+ updating phase of life cycle.
+
+Router: To navigate from one page to another. 
+		This has to be explicitly installed in npm.
+		
+		npm install react-router-dom --save
+		
+	Route:A route is mapping b/w URL and a component.
+	Router: Is a top level component that provides routing infrastructure
+		enable routing by index.js--> include the browser router tag with App inside <React.StrictMode>.<BrowserRouter><App /></BrowserRouter>
+	Nested Routes: used in login pages. tree.
+	Link:enables navigation by creating anchor-like elements that maintains the application state.
+		
+Axios: get, post, put, delete
+ npm install axios
+
+--------------------
+JSON Server installation:
+npm install -g json-server
+
+create list of users json in folder, where this is installed.
+
+json-server --watch Users.json
+
+by default it will be on port 3000.
+to update the port, 
+json-server --watch data.json --port 8000
+ 
+---------------
+Bootstrap:
+
+To install bootstrap in project folder, run the below commands in cmd.
+		npm install bootstrap --save
+		npm install --save reactstrap react react-dom
+
+include CDN link in index.html.
+-----------------------------------
+Component Life Cycle Methods:
+
+These methods r invoked only for clas component
+
+Every component goes throught these are 4 phases.
+	1.Initialization: In this phase a component is provided with default props and initial states.
+		EX: Constructor of a component class.
+	2.Mounting: In this phase react component is created and mounted(inserted) in to the DOM.
+		There are 2 methods,
+		1.componentWillMount()- This is like a pre mounting. invoked once and just before the react component is about to be mounted into the DOM.
+		2.componentDidMount()- This is like a post mount, invoked once and just after react component is mounted, something like render function.
+		Ex: 1.componentWillMount-- to call APIS or setting up data from event listeners.
+			2.componentDidMount-- 
+	3.Updating: This is the phase where the state or props of a component is get updated. React component can be updated when sending new props or or when updating the state.
+		componentWillReceiveProps()--This method is invoked when a component is receiving props from parent/child.
+		shouldComponentUpdate()---This method tells the React that should it re-render component or skip rendering. This method returns a boolean (TRUE or FALSE) value and 
+									accordingly the component would be re-rendered or skipped. By default it return TRUE. This is automatically called during setState method.
+		componentWillUpdate()--
+		componentDidUpdate()---
+			EX: This is called after a component has re-rendered due to changes in its state or props. It's a great place to handle  side effects or perform additional actions based on those changes.
+	4.Unmounting:In this phase, React component is get unmounted from the DOM. This is the final phase of the Component’s lifeycle. There is only one method is called in this phase
+		componentWillUnmount() :- This method is called just before the component is
+								unmounted from the DOM. This method can be used to perform any cleanup task such as –
+								invalidating timers or cleaning up DOM elements.
+
+
+*****************In functional component as well, we can use lifecycle methods but with different methods using hooks*******************
+
+
+
+State Lifting:
+child to parent
+
+Props Drilling:
+
+Redux and context API are state management tools in react. 
+
+Context API:
+This is default, inbuilt state management library.
+This is given in 16.3 . Which is state management library. 
+Used for accessing state by nested/child components instead of props drilling.
+State can be defined for both app and component in a container.
+	1.Create Context. -->const UserContext=React.CreateContext()
+	2.Provide the context. 
+	3.Consume the context value.
+
+
+Redux State Container:
+
+Redux is in market before the Context API was introduced.
+To hold the state centrally for all nested components.
+
+Redux is a pattern and library for managing application state, using event called actions.
+Redux is a predictable state container library.
+Redux is open source JS library.
+react-redux is official UI binding library.
+react-redux provides a set of APIs/Functions which will help you to connect to react app,
+
+Store: Hold the state of application, which brings actions and reducer together.
+
+Action:Should have 2 properties,what should be changed in state and type of action.
+
+Reducer: Which actually carries out of the state transition. 
+
+Js app--->dispatch function-->Action-->Reducer-->Redux store-->Subscribed by JS App-->JS APP
+
+npm install -g redux --force      //install redux
+npm install -g react-redux --force	//install react redux
+npm install redux-thunk --save --force //install react thunk
+npm install @reduxjs/toolkit --force
+npm install --save-dev redux-devtools --force
+
+
+useSelector hook will fetch the state from react store and once 
+
+
+these below tags has to be included in APP.js and all the components have to be included inside them.
+store passed as props is custom js file.
+<Provider store={store}>
+
+</Provider>
+-------------------
+Redux Thunk: 
+
+By default redux is synchronous.
+To make redux async, we need to use thunk. 
+Thunk is a middleware library.(redux-thunk)
+----------------------------------------------------------------
+Performance: Enables cache to avoid unnecessary re-render.
+Memorization:Cache
+
+Class component will use PureComponent. 
+	Pure Component- This will have input values and the calculation is based only on inputs. This will get rendered only if input prop/state changes for that component.
+Functional Component - 
+	useCallBack, 
+	UseMemo,
+	Memo- this will work only for props, but not functional props.
+
+
+React Hooks:
+UseForm()- given by react hook form, custom component. 
+
+useState
+useEffect
+useContext
+useForm
+
+memo- memo will be used only for props and state from parent. If the functional props are used, we need to use memo in combination with useCallBack or useMemo.
+useCallBack- return the memoized call function, this will b e used by memo hook.
+useMemo- returns memoized value.
+
+----------------------------------------------------------------
+Lazy Loading/dynamic import:
+All components should not be loaded in the APP component, even if they are commented. As the system tries to compile the logic/load the component.
+Lazy Loading is used to declare the import, so that the component will be imported only when reference.
+	Ex:const About=React.lazy(()=> import ('./About'));
+	To show loading sign,<React.Suspense fallback={<div>Loading...</div>}>
+      <About></About>
+    </React.Suspense>
+-----------------------------------------------
+
+next.js
+
+This is react FW, used for routing.
+This will support client side rendering.
+released in 2015.
+current version: 15.x
+
+1.npm i -g create-next-app 
+2.npm i -g create-next-app projectname
+
+TYPESCRIPT= java script+type
+EsLint -converter this will check the code quality
+Tailwind CSS -Yes...
+
+3.npm run build after moving in to project folder.
+4.npm run start
+
+5.npm run dev can also be run instead of step 3,4
+
+Get started by editing app/page.tsx
+
+
+
+This will help in easy development.
+React is not feasible to create fully-featured app ready for prod. 
+So next JS will solve it, by providing additional features(routing,optimised rendering,fetching,compiling, bundling), will make prod ready.
+
+
+how system executes the next js app.
+layout.tsx-->children function
+
+We can create page.tsx in different folder and launching host/foldername will automatically load the component page.tsx
+
+This is has file system based routing mechanism.
+
+routing conventions:
+	all routes must be placed inside the app folder.
+	every file that corresponds to a route must correspond to page.js/tsx
+	every folder inside the app folder, corresponds to a path segment as URL.
+	If the component has to be having input, create file name in []. ex: [productid]
+	 
+we can remove warnings in the files, by making strict as false in tsconfig.json (if type is not declared)
+
+
+
+React Server Component:
+1.Server
+	All components are server components by default.they perform task like interacting with DB and files and will not be able to use hooks and handle user interaction.
+
+2.Client
+	to make a client component, useClient has to be included. This will not be able to interact with DB and files and hooks can be used.
+
+client-->Server
+Server sends index.html and bundle.js(the total code)
+
+due to client side rendering(static Side Generation), bundle.js will be having huge file size and will take time to load.
+
+
+in Server Side Rendering(SSR): in next JS this is default, and server sends only index.html by running in server and result will only be sent.
+loading time will be reduced.
+
+
+
+
+
+https://github.com/KiranTunuguntla/React/blob/main/BankApp%20Kiran_Tunuguntla.zip
+
+
+
+testing:
+
+JEST toolkit
